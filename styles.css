@@ -1,0 +1,48 @@
+
+.navbar {
+  background-color: #001f3f !important;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+body {
+      background-color: #001f3f;
+        color: #3774b0; 
+    }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000000; 
+}
+
+.card-title {
+  color: #001f3f; 
+}
+
+.card-title,
+.card-text,
+h4 {
+  color: black;
+}
+
+
+.btn-primary {
+  background-color: #ff3300; 
+  border-color: #ff3300; 
+}
+
+.footer {
+  background-color: #ff3300;
+}
+
+.black-text {
+  color: black;
+}
+
+.footer {
+  background-color: #001f3f;
+}
+
