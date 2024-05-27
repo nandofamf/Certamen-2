@@ -60,6 +60,8 @@ $(document).ready(function() {
       $(`#item-${index}`).append(saveButton); 
     }
 
+
+    
     function saveChanges(index) {
       const newName = $(`#item-${index} input[type="text"]`).val().trim();
       if (!newName) {
@@ -100,6 +102,15 @@ $(document).ready(function() {
     window.saveChanges = saveChanges;
   });
   
+  $.getJSON('https://mindicador.cl/api', function(data) {
+    var dailyIndicators = data;
+    $("#uf-value").html('$' + dailyIndicators.uf.valor);
+    $("#dolar-value").html('$' + dailyIndicators.dolar.valor);
+    $("#euro-value").html('$' + dailyIndicators.euro.valor);
+  }).fail(function() {
+    console.log('Error al consumir la API!');
+  });
+
   $('a[href="#inicio"]').click(function(){
     $('html, body').animate({
         scrollTop: 0
@@ -113,4 +124,5 @@ $('a[href="#productos"]').click(function(){
     }, 'slow');
     return false;
 });
+
 
