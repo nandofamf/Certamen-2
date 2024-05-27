@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +14,10 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-      <img src="fotos/Auto tech.png" alt="Logo" width="100" height="70" class="d-inline-block align-top" loading="lazy" >
+      <img src="fotos/Auto tech.png" alt="Logo" width="100" height="70" class="d-inline-block align-top" loading="lazy">
     </a>
     <h1>MotorCity</h1>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,7 +26,7 @@
           <a class="nav-link" href="inicio.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="productos.html">Catalogo</a>
+          <a class="nav-link" href="catalogo.html">Catálogo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="sucursal.html">Sucursales</a>
@@ -48,22 +46,23 @@
     <form id="addProductForm" class="mb-3">
       <div class="form-row">
         <div class="col">
-          <input type="text" id="productName" class="form-control" placeholder="Nombre del Producto">
+          <input type="text" id="productName" class="form-control" placeholder="Nombre del Producto" required>
         </div>
         <div class="col">
-          <input type="number" id="productQuantity" class="form-control" placeholder="Cantidad" min="1" max="10">
+          <input type="number" id="productQuantity" class="form-control" placeholder="Cantidad" min="1" max="10" required>
         </div>
         <button type="submit" class="btn btn-primary">Agregar Producto</button>
       </div>
     </form>
     <ul class="list-group mb-3" id="cart"></ul>
     <h3>Total: $<span id="totalPrice">0.00</span></h3>
+    <button id="payButton" class="btn btn-success">Pagar</button>
+    <div id="paymentMessage" class="mt-3" style="display: none;">
+      <h4 class="text-success">Se ha comprado:</h4> <!-- Modificación aquí -->
+      <ul id="purchasedItems" class="list-group mt-2"></ul>
+    </div>
   </div>
 
-  <!-- Bootstrap JS (jQuery is required) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function() {
       const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -74,7 +73,7 @@
         cart.forEach((item, index) => {
           if (item.quantity > 0) {
             totalPrice += item.totalPrice;
-            const formattedPrice = item.totalPrice.toLocaleString(); // Formatear el precio con puntos
+            const formattedPrice = item.totalPrice.toLocaleString();
             const listItem = $(`<li class="list-group-item" id="item-${index}">
                                   <span class="name">${item.name}</span> - Cantidad: <span class="quantity">${item.quantity}</span> - Precio Total: $<span class="totalPrice">${formattedPrice}</span>
                                   <button class="btn btn-info btn-sm float-right mr-2" onclick="editItem(${index})">Editar</button>
@@ -83,7 +82,7 @@
             $('#cart').append(listItem);
           }
         });
-        $('#totalPrice').text(totalPrice.toLocaleString()); // Formatear el precio total con puntos
+        $('#totalPrice').text(totalPrice.toLocaleString());
       }
 
       function addToCart(product) {
@@ -158,6 +157,21 @@
         $('#addProductForm')[0].reset();
       });
 
+      $('#payButton').click(function() {
+        if (cart.length === 0) {
+          alert('El carrito está vacío.');
+          return;
+        }
+        $('#purchasedItems').empty();
+        cart.forEach(item => {
+          $('#purchasedItems').append(`<li class="list-group-item">${item.quantity} ${item.name}</li>`);
+        });
+        localStorage.removeItem('cart');
+        $('#cart').empty();
+        $('#totalPrice').text('0.00');
+        $('#paymentMessage').show();
+      });
+
       // Load cart from localStorage
       renderCart();
 
@@ -181,9 +195,6 @@
     });
   </script>
 
-
-
-
   <footer class="footer py-3">
     <div class="container">
       <span class="text-muted">© 2024 MotorCity. Todos los derechos reservados.</span>
@@ -192,4 +203,3 @@
 
 </body>
 </html>
-
