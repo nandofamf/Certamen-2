@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoKart - Tu Tienda de Autos</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="fotos/Auto tech.png" alt="Logo" width="100" height="70" class="d-inline-block align-top" loading="lazy">
+    </a>
+    <h1>MotorCity</h1>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="inicio.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="catalogo.html">Catalogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sucursal.html">Sucursales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="carrito.html">Carrito <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2>Productos</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="fotos/audir8.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">AUDI R8 2024</h5>
+            <p class="card-text"><strong>Precio: $70.000.000</strong></p>
+            <p class="card-text">•32,000 km •automatico •Bencina</p>
+            <button class="btn btn-primary add-to-cart" data-name="AUDI R8 2024" data-price="70000000">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="fotos/bmx-1.jpg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">BMW X3 2024 2.0 XDrive 30i M Sport A</h5>
+              <p class="card-text"><strong>Precio: $25.000.000</strong></p>
+              <p class="card-text">•44,567 km •automatico •Bencina</p>
+              <button class="btn btn-primary add-to-cart" data-name="BMW X3 2024" data-price="25000000">Agregar al Carrito</button>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="fotos/lamborghini.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Gallardo 2024</h5>
+            <p class="card-text"><strong>Precio: $40.110.000</strong></p>
+            <p class="card-text">•6,927 km •Manual •Bencina</p>
+            <button class="btn btn-primary add-to-cart" data-name="Lamborghini Gallardo 2024" data-price="40110000">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="fotos/maserati-1.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Maserati Granturismo 4.2 V8 2024</h5>
+            <p class="card-text"><strong>Precio: $57.000.000</strong></p>
+            <p class="card-text">•66,000 km •Automatico •Bencina</p>
+            <button class="btn btn-primary add-to-cart" data-name="Maserati Granturismo" data-price="57000000">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="fotos/rolls.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Rolls-Royce Cullinan 4x4 BLACK BADGE 2024</h5>
+            <p class="card-text"><strong>Precio: $85.000.000</strong></p>
+            <p class="card-text">•66,000 km •Automatico •Bencina</p>
+            <button class="btn btn-primary add-to-cart" data-name="Rolls-Royce Cullinan" data-price="85000000">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="fotos/jaguar-1.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">Jaguar F-Pace 2023 2.0 2024</h5>
+            <p class="card-text"><strong>Precio: $55.000.000</strong></p>
+            <p class="card-text">•17,587 km •Automatico •Bencina</p>
+            <button class="btn btn-primary add-to-cart" data-name="Jaguar F-Pace 2023 2.0 2024" data-price="55000000">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="fotos/porsche-1.jpg" class="card-img-top" alt="Producto 1">
+          <div class="card-body">
+            <h5 class="card-title">2024 Porsche Cayenne Coupe 2.9</h5>
+            <p class="card-text"><strong>Precio: $66.666.000</strong></p>
+            <p class="card-text">•14,000 km •Automatico •Bencina</p>
+            <button class="btn btn-primary add-to-cart" data-name="2024 Porsche Cayenne Coupe 2.9" data-price="66666000">Agregar al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.add-to-cart').click(function() {
+        const name = $(this).data('name');
+        const price = parseFloat($(this).data('price'));
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingProductIndex = cart.findIndex(item => item.name === name);
+
+        if (existingProductIndex !== -1) {
+          cart[existingProductIndex].quantity += 1;
+          cart[existingProductIndex].totalPrice += price;
+        } else {
+          cart.push({ name, price, quantity: 1, totalPrice: price });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert('Producto agregado al carrito');
+      });
+    });
+  </script>
+
+
+<div id="indicadores" class="container mt-5">
+  <!-- Aquí se mostrarán los indicadores económicos -->
+</div>
+
+<div id="indicators" class="container mt-5">
+  <h3 class="text-center mb-4">Indicadores Económicos</h3>
+  <div class="row">
+      <div class="col-md-4">
+          <div id="uf" class="card mb-4 shadow-sm">
+              <div class="card-body">
+                  <h5 class="card-title">Valor actual de la UF</h5>
+                  <p id="uf-value" class="card-text"></p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div id="dolar" class="card mb-4 shadow-sm">
+              <div class="card-body">
+                  <h5 class="card-title">Valor actual del Dólar</h5>
+                  <p id="dolar-value" class="card-text"></p>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div id="euro" class="card mb-4 shadow-sm">
+              <div class="card-body">
+                  <h5 class="card-title">Valor actual del Euro</h5>
+                  <p id="euro-value" class="card-text"></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<footer class="footer py-3">
+  <div class="container">
+      <span class="text-muted">© 2024 MotorCity. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<script>
+  $(document).ready(function() {
+    $('.add-to-cart').click(function() {
+      const name = $(this).data('name');
+      const price = parseFloat($(this).data('price'));
+
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const existingProductIndex = cart.findIndex(item => item.name === name);
+
+      if (existingProductIndex !== -1) {
+        cart[existingProductIndex].quantity += 1;
+        cart[existingProductIndex].totalPrice += price;
+      } else {
+        cart.push({ name, price, quantity: 1, totalPrice: price });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert('Producto agregado al carrito');
+    });
+
+    // Indicadores Económicos
+    $.getJSON('https://mindicador.cl/api', function(data) {
+        $("#uf-value").html('$' + data.uf.valor.toFixed(2));
+        $("#dolar-value").html('$' + data.dolar.valor.toFixed(2));
+        $("#euro-value").html('$' + data.euro.valor.toFixed(2));
+    }).fail(function() {
+        console.log('Error al consumir la API!');
+    });
+
+    $('a[href="#inicio"]').click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 'slow');
+        return false;
+    });
+
+    $('a[href="#productos"]').click(function(){
+        $('html, body').animate({
+            scrollTop: $("#productos").offset().top
+        }, 'slow');
+        return false;
+    });
+  });
+</script>
+
+<footer class="footer py-3">
+  <div class="container">
+    <span class="text-muted">© 2024 MotorCity. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+</body>
+
+</html>
